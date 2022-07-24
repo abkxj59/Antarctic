@@ -1,0 +1,17 @@
+.social__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.social__item {
+  margin-left: 28px;
+
+  @include vp-1023 {
+    margin-left: 23px;
+  }
+
+  &:first-child {
+    margin: 0;
+  }
+}

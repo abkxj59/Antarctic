@@ -1,0 +1,175 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // align-items: flex-start;
+  align-content: flex-start;
+  color: $base-white;
+  padding-top: 35px;
+
+  @include vp-1023 {
+    padding-top: 30px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    padding-top: 20px;
+  }
+}
+
+.nav--opened {
+  @include vp-767 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 35px;
+
+    bottom: 0;
+    background-color: $base-white;
+    color: $base-blue;
+    overflow: hidden;
+    overflow-y: auto;
+    width: auto;
+    &::before {
+
+    }
+  }
+}
+
+.nav--nojs {
+  @include vp-767 {
+    position: static;
+    display: block;
+    margin: 0;
+    // min-height: min-content;
+  }
+}
+
+.nav--footer {
+  padding-top: 0;
+
+  @include vp-1023 {
+    padding-top: 0;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+  }
+}
+
+.nav--closed  .nav__list {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.nav__logo {
+  color: inherit;
+  margin-right: 40px;
+
+  @include vp-1023 {
+    margin-right: 25px;
+  }
+
+  @include vp-767 {
+    display: block;
+    padding-left: 15px;
+  }
+}
+
+.nav__logo-img {
+  display: block;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+  }
+}
+
+.nav__toggle-button {
+  border: none;
+  background: none;
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    padding-right: 15px;
+  }
+}
+
+.nav--opened .nav__toggle-img {
+  width: 13px;
+  height: 13px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  @include vp-767 {
+    margin-top: 43px;
+    width: 100%;
+  }
+}
+
+.nav__item {
+  margin-left: 33px;
+
+  @include vp-1023 {
+    margin-left: 23px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.nav__link {
+  display: block;
+  color: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 9px 0;
+
+  @include vp-1023 {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px 25px 8px;
+    width: 100%;
+  }
+}
+
+.nav--footer .nav__logo {
+  padding: 0;
+}
+
+.nav--footer .nav__list {
+  margin-top: 0;
+
+  @include vp-767 {
+    margin-top: 30px;
+  }
+}
+
+.nav--footer .nav__link {
+  @include vp-1023 {
+    font-size: 12px;
+    padding: 0;
+  }
+}
