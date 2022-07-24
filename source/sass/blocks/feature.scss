@@ -1,0 +1,66 @@
+.feature {
+  background-color: $base-white;
+  padding: 30px;
+  padding-bottom: 25px;
+  position: relative;
+
+  @include vp-1023 {
+    padding: 21px 20px;
+    padding-right: 16px;
+  }
+
+  @include vp-767 {
+    // padding-right: 10px;
+  }
+}
+
+.feature__icon {
+  position: absolute;
+}
+
+.feature__icon--liner {
+  @include vp-1023 {
+    width: 21px;
+    top: 23px;
+  }
+}
+
+.feature__icon--all-inclusive {
+  top: 35px;
+
+  @include vp-1023 {
+    top: 29px;
+    width: 33px;
+  }
+}
+
+.feature__icon--boat {
+  top: 38px;
+
+  @include vp-1023 {
+    width: 38px;
+    top: 29px;
+  }
+}
+
+.feature__heading {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+  @include vp-1023 {
+    line-height: 25px;
+  }
+
+  @include vp-767 {
+    padding-right: 55px;
+  }
+}
+
+.feature__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}

@@ -671,7 +671,7 @@ button,
   overflow: hidden;
 }
 
-.page__section {
+.page__section-container {
   padding: 120px 20px;
 }
 
@@ -680,6 +680,9 @@ button,
   line-height: 30px;
   font-weight: 600;
   margin: 0;
+  margin-top: -5px;
+  margin-bottom: 55px;
+  text-align: center;
 }
 
 .nav {
@@ -789,20 +792,28 @@ button,
   line-height: 24px;
 }
 
-.about {
+.about__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+}
+
+.about__text {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.about__heading {
+  text-align: start;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .about__description {
   margin: 0;
-  margin-top: 30px;
 }
 
 .about__img {
@@ -812,8 +823,86 @@ button,
   object-fit: cover;
 }
 
+.features {
+  display: -ms-grid;
+  display: grid;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.features__bg {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
+  height: 562px;
+}
+
+.features__container {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.features__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.feature {
+  background-color: #F9FBFD;
+  padding: 30px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.feature__icon {
+  position: absolute;
+}
+
+.feature__icon--all-inclusive {
+  top: 35px;
+}
+
+.feature__icon--boat {
+  top: 38px;
+}
+
+.feature__heading {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.feature__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .page-footer {
   background-color: #011C40;
+}
+
+.page-footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -862,11 +951,13 @@ button,
     padding: 0 45px;
   }
 
-  .page__section {
+  .page__section-container {
     padding: 90px 45px;
   }
 
   .page__section-heading {
+    margin-top: 0;
+    margin-bottom: 50px;
     font-size: 26px;
     line-height: 36px;
   }
@@ -925,21 +1016,58 @@ button,
     line-height: 20px;
   }
 
-  .about {
+  .about__container {
     gap: 30px;
   }
 
+  .about__heading {
+    margin-bottom: 16px;
+  }
+
   .about__description {
-    margin-top: 16px;
+    margin-bottom: 5px;
   }
 
   .about__pic {
     height: 95%;
-    margin-top: 5px;
+    padding-top: 10px;
   }
 
   .about__img {
     height: 100%;
+  }
+
+  .features__bg {
+    height: 588px;
+  }
+
+  .features__list {
+    gap: 30px;
+    margin-bottom: 10px;
+  }
+
+  .feature {
+    padding: 21px 20px;
+    padding-right: 16px;
+  }
+
+  .feature__icon--liner {
+    width: 21px;
+    top: 23px;
+  }
+
+  .feature__icon--all-inclusive {
+    top: 29px;
+    width: 33px;
+  }
+
+  .feature__icon--boat {
+    width: 38px;
+    top: 29px;
+  }
+
+  .feature__heading {
+    line-height: 25px;
   }
 
   .social__item {
@@ -952,14 +1080,15 @@ button,
     padding: 0 15px;
   }
 
-  .page__section {
+  .page__section-container {
     padding: 65px 15px;
   }
 
   .page__section-heading {
     font-size: 24px;
     line-height: 34px;
-    margin-top: -9px;
+    margin-top: -8px;
+    margin-bottom: 30px;
   }
 
   .nav {
@@ -1052,8 +1181,12 @@ button,
     line-height: 22px;
   }
 
-  .about {
+  .about__container {
     display: block;
+  }
+
+  .about__heading {
+    margin-bottom: 15px;
   }
 
   .about__description {
@@ -1068,7 +1201,20 @@ button,
     min-height: 186px;
   }
 
-  .page-footer {
+  .features__bg {
+    height: 997px;
+  }
+
+  .features__list {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+
+  .feature__heading {
+    padding-right: 55px;
+  }
+
+  .page-footer__container {
     display: block;
     height: auto;
     padding: 40px 15px;

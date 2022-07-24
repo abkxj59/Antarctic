@@ -67,83 +67,118 @@
         </div>
       </section>
 
-      <section class="page__section about container">
-        <div class="about__text">
-          <h2 class="page__section-heading about__heading">Путешествие на&nbsp;край&nbsp;Земли</h2>
-          <p class="about__description">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
-        </div>
-        <picture class="about__pic">
-          <!-- <source type="image/webp" srcset="img/penguins-desktop.webp 1x, img/penguins-desktop@2x.webp 2x"> -->
-          <!-- <source type="image/webp" media="(max-width: 1023px)" srcset="img/penguins-tablet.webp 1x, img/penguins-tablet@2x.webp 2x"> -->
-          <!-- <source type="image/webp" media="(max-width: 767px)" srcset="img/penguins-mobile.webp 1x, img/penguins-mobile@2x.webp 2x"> -->
+      <section class="page__section about">
+        <div class="container page__section-container about__container">
+          <div class="about__text">
+            <h2 class="page__section-heading about__heading">Путешествие на&nbsp;край&nbsp;Земли</h2>
+            <p class="about__description">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+          </div>
+          <picture class="about__pic">
+            <!-- <source type="image/webp" srcset="img/penguins-desktop.webp 1x, img/penguins-desktop@2x.webp 2x"> -->
+            <!-- <source type="image/webp" media="(max-width: 1023px)" srcset="img/penguins-tablet.webp 1x, img/penguins-tablet@2x.webp 2x"> -->
+            <!-- <source type="image/webp" media="(max-width: 767px)" srcset="img/penguins-mobile.webp 1x, img/penguins-mobile@2x.webp 2x"> -->
 
-          <img class="about__img" src="img/penguins-full.jpg" srcset="img/penguins-full@2x.jpg 2x" alt="penguins" width="560" height="301">
-          <!-- <source media="(max-width: 1023px)" srcset="img/penguins-tablet.jpg 1x, img/penguins-tablet@2x.jpg 2x"> -->
-          <!-- <source media="(max-width: 767px)" srcset="img/penguins-mobile.jpg 1x, img/penguins-mobile@2x.jpg 2x"> -->
-        </picture>
+            <img class="about__img" src="img/penguins-full.jpg" srcset="img/penguins-full@2x.jpg 2x" alt="penguins" width="560" height="301">
+            <!-- <source media="(max-width: 1023px)" srcset="img/penguins-tablet.jpg 1x, img/penguins-tablet@2x.jpg 2x"> -->
+            <!-- <source media="(max-width: 767px)" srcset="img/penguins-mobile.jpg 1x, img/penguins-mobile@2x.jpg 2x"> -->
+          </picture>
+        </div>
+      </section>
+
+      <section class="page__section features">
+        <img class="features__bg" src="img/features-bg-full.jpg" srcset="img/features-bg-full@2x.jpg 2x" height="562" alt="">
+        <div class="container features__container page__section-container">
+          <h2 class="page__section-heading features__heading">Преимущества</h2>
+          <ul class="features__list">
+            <li class="features__item feature">
+              <svg class="feature__icon feature__icon--liner" width="27" height="32">
+                <use xlink:href="img/sprite_auto.svg#feature-liner"></use>
+              </svg>
+              <h3 class="feature__heading">Небольшой круизный&nbsp;лайнер</h3>
+              <p class="feature__text">Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
+            </li>
+            <li class="features__item feature">
+              <svg class="feature__icon feature__icon--all-inclusive" width="38" height="21">
+                <use xlink:href="img/sprite_auto.svg#feature-all-inclusive"></use>
+              </svg>
+              <h3 class="feature__heading">Система все&nbsp;включено</h3>
+              <p class="feature__text">Все наши круизы работают
+                по&nbsp;системе “Все Включено”. Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
+            </li>
+            <li class="features__item feature">
+              <svg class="feature__icon feature__icon--boat" width="38" height="21">
+                <use xlink:href="img/sprite_auto.svg#feature-boat"></use>
+              </svg>
+              <h3 class="feature__heading">Экскурсионные туры на Zodiac</h3>
+              <p class="feature__text">Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</p>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
-    <footer class="page__footer page-footer container">
-      <div class="page-footer__nav nav nav--footer">
-        <a class="nav__logo">
-          <svg class="nav__logo-img" width="78" height="38" aria-labelledby="logo">
-            <title id="logo">
-              Antarctic logo
-            </title>
-            <use xlink:href="img/sprite_auto.svg#logo"></use>
-          </svg>
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Преимущества
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Направления
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Ближайшие круизы
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Контакты
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <svg class="social__icon" width="9" height="16" aria-labelledby="icon-fb">
-                <title id="icon-fb">Facebook</title>
-                <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <svg class="social__icon" width="16" height="16" aria-labelledby="icon-insta">
-                <title id="icon-insta">Instagramm</title>
-                <use xlink:href="img/sprite_auto.svg#icon-insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <svg class="social__icon" width="16" height="13" aria-labelledby="icon-twitter">
-                <title id="icon-twitter">Twitter</title>
-                <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+    <footer class="page__footer page-footer">
+      <div class="container page-footer__container">
+        <div class="page-footer__nav nav nav--footer">
+          <a class="nav__logo">
+            <svg class="nav__logo-img" width="78" height="38" aria-labelledby="logo">
+              <title id="logo">
+                Antarctic logo
+              </title>
+              <use xlink:href="img/sprite_auto.svg#logo"></use>
+            </svg>
+          </a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Преимущества
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Направления
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Ближайшие круизы
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" width="9" height="16" aria-labelledby="icon-fb">
+                  <title id="icon-fb">Facebook</title>
+                  <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" width="16" height="16" aria-labelledby="icon-insta">
+                  <title id="icon-insta">Instagramm</title>
+                  <use xlink:href="img/sprite_auto.svg#icon-insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" width="16" height="13" aria-labelledby="icon-twitter">
+                  <title id="icon-twitter">Twitter</title>
+                  <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
 
