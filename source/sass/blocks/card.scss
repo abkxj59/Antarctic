@@ -17,12 +17,31 @@
   font-size: 18px;
   line-height: 25px;
   font-weight: 500;
+
+  @include vp-1023 {
+    top: 315px;
+    left: 35px;
+  }
+
+  @include vp-767 {
+    top: 325px;
+    left: 25px;
+  }
 }
 
 .card:focus .card__heading,
 .card:hover .card__heading {
   top: 12px;
   left: 25px;
+
+  @include vp-1023 {
+    left: 35px;
+  }
+
+  @include vp-767 {
+    top: 10px;
+    left: 25px;
+  }
 }
 
 .card__details {
@@ -33,6 +52,17 @@
   line-height: 21px;
   width: 100%;
   min-height: 386px;
+
+  @include vp-1023 {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @include vp-767 {
+    padding-top: 67px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 .card:hover .card__details,

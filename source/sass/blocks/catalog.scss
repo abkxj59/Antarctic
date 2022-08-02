@@ -6,4 +6,14 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   justify-content: space-around;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 10px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: auto;
+    padding: 0 10px;
+  }
 }

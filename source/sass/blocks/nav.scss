@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  // align-items: flex-start;
   align-content: flex-start;
   color: $base-white;
   padding-top: 35px;
@@ -30,9 +29,6 @@
     overflow: hidden;
     overflow-y: auto;
     width: auto;
-    &::before {
-
-    }
   }
 }
 
@@ -141,6 +137,10 @@
   line-height: 20px;
   font-weight: 500;
   padding: 9px 0;
+
+  &:hover {
+    color: $features-bg-color;
+  }
 
   @include vp-1023 {
     font-size: 14px;

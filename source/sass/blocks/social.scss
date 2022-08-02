@@ -15,3 +15,11 @@
     margin: 0;
   }
 }
+
+.social__link {
+  color: $base-white;
+
+  &:hover {
+    color: $features-bg-color;
+  }
+}

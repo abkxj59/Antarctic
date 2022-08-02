@@ -40,5 +40,6 @@
 
   @include vp-767 {
     grid-template-columns: auto;
+    margin-bottom: 0;
   }
 }
