@@ -653,6 +653,7 @@ button,
   line-height: 24px;
   font-weight: 400;
   font-style: normal;
+  color: #011C40;
 }
 
 .page__body {
@@ -737,6 +738,10 @@ button,
 
 .nav__item {
   margin-left: 33px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link {
@@ -999,6 +1004,7 @@ button,
 .booking {
   position: relative;
   text-align: start;
+  min-height: 505px;
 }
 
 .booking__container {
@@ -1149,6 +1155,52 @@ button,
   background-color: #E3ECF6;
 }
 
+.contacts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 500px;
+  grid-template-columns: 1fr 500px;
+  gap: 100px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 306px;
+}
+
+.contacts h2 {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.contacts a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #011C40;
+  margin-bottom: 20px;
+}
+
+.contacts a:last-child {
+  margin-bottom: 0;
+}
+
+.contacts svg {
+  margin-right: 10px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.contacts p {
+  margin: 0;
+}
+
 .page-footer {
   background-color: #011C40;
 }
@@ -1159,7 +1211,7 @@ button,
   display: flex;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  height: 138px;
+  min-height: 138px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1180,6 +1232,8 @@ button,
   display: -ms-flexbox;
   display: flex;
   padding: 0;
+  margin: 0;
+  margin-top: 5px;
 }
 
 .social__item {
@@ -1190,11 +1244,11 @@ button,
   margin: 0;
 }
 
-.social__link {
+.social a {
   color: #F9FBFD;
 }
 
-.social__link:hover {
+.social a:hover {
   color: #E3ECF6;
 }
 
@@ -1353,6 +1407,7 @@ button,
   .booking {
     display: block;
     text-align: center;
+    min-height: 805px;
   }
 
   .booking__container {
@@ -1381,8 +1436,39 @@ button,
     text-align: start;
   }
 
+  .contacts {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .contacts__map {
+    height: 335px;
+  }
+
+  .contacts img {
+    width: 324px;
+    height: 335px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .contacts h2 {
+    margin-bottom: 30px;
+  }
+
+  .page-footer__container {
+    min-height: 120px;
+  }
+
   .social__item {
-    margin-left: 23px;
+    margin-left: 19px;
+  }
+
+  .social svg {
+    height: 16px;
   }
 }
 
@@ -1468,7 +1554,7 @@ button,
   }
 
   .nav--footer .nav__list {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   .promo {
@@ -1553,6 +1639,14 @@ button,
     padding-right: 25px;
   }
 
+  .booking {
+    min-height: 760px;
+  }
+
+  .booking img {
+    height: 760px;
+  }
+
   .booking__form {
     width: 100%;
     margin-top: 35px;
@@ -1590,9 +1684,36 @@ button,
     margin-right: 8px;
   }
 
+  .contacts {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contacts__map {
+    height: 316px;
+  }
+
+  .contacts img {
+    height: 316px;
+  }
+
+  .contacts__text {
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+  }
+
+  .contacts h2 {
+    margin-top: -10px;
+  }
+
   .page-footer__container {
     display: block;
-    height: auto;
     padding: 40px 15px;
+  }
+
+  .page-footer__social {
+    margin-top: 10px;
+    margin-bottom: -5px;
   }
 }

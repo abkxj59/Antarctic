@@ -23,7 +23,7 @@
     <header class="page__header page-header">
       <nav class="page-header__nav nav nav--opened nav--nojs container">
         <a class="nav__logo">
-          <svg class="nav__logo-img" width="78" height="38" aria-labelledby="logo">
+          <svg class="nav__logo-img" width="70" height="38" aria-labelledby="logo">
             <title id="logo">
               Antarctic logo
             </title>
@@ -292,13 +292,38 @@
           </form>
         </div>
       </section>
+
+      <section class="page__section page__section-container container contacts">
+        <div class="contacts__map" id="map">
+          <img class="contacts__map-img" src="img/map-desktop.jpg" srcset="img/map-desktop@2x.jpg 2x" width="560" height="306" alt="Местонахождение">
+        </div>
+        <div class="contacts__text">
+          <h2 class="contacts__heading">У вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы вам все расскажем.</h2>
+          <a class="contacts__link contacts__link--address" href="geo:59.9387165,30.3230474">
+            <svg class="contacts__link-icon" width="18" height="22">
+              <use xlink:href="img/sprite_auto.svg#icon-location"></use>
+            </svg>
+            <p class="contacts__link-text">
+              г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, 19/8
+            </p>
+          </a>
+          <a class="contacts__link contacts__link--tel" href="tel:88002000000">
+            <svg class="contacts__link-icon" width="18" height="18">
+              <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+            </svg>
+            <p class="contacts__link-text">
+              8-800-200-00-00
+            </p>
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="page__footer page-footer">
       <div class="container page-footer__container">
         <div class="page-footer__nav nav nav--footer">
           <a class="nav__logo">
-            <svg class="nav__logo-img" width="78" height="38" aria-labelledby="logo">
+            <svg class="nav__logo-img" width="70" height="38" aria-labelledby="logo">
               <title id="logo">
                 Antarctic logo
               </title>
@@ -332,7 +357,7 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__icon" width="9" height="16" aria-labelledby="icon-fb">
+                <svg class="social__icon" width="11" height="20" aria-labelledby="icon-fb">
                   <title id="icon-fb">Facebook</title>
                   <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
                 </svg>
@@ -340,7 +365,7 @@
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__icon" width="16" height="16" aria-labelledby="icon-insta">
+                <svg class="social__icon" width="20" height="20" aria-labelledby="icon-insta">
                   <title id="icon-insta">Instagramm</title>
                   <use xlink:href="img/sprite_auto.svg#icon-insta"></use>
                 </svg>
@@ -348,7 +373,7 @@
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__icon" width="16" height="13" aria-labelledby="icon-twitter">
+                <svg class="social__icon" width="20" height="16" aria-labelledby="icon-twitter">
                   <title id="icon-twitter">Twitter</title>
                   <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
                 </svg>
@@ -360,6 +385,7 @@
     </footer>
 
       <!-- <script src="js/vendor.min.js"></script> -->
+      <script src="https://api-maps.yandex.ru/2.1/?apikey=ee9a33b2-7186-4797-a937-a57238932550&lang=ru_RU" type="text/javascript"></script>
       <script src="js/main.min.js"></script>
   </body>
 </html>

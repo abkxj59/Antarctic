@@ -1,10 +1,16 @@
 .booking {
   position: relative;
   text-align: start;
+  min-height: 505px;
 
   @include vp-1023 {
     display: block;
     text-align: center;
+    min-height: 805px;
+  }
+
+  @include vp-767 {
+    min-height: 760px;
   }
 }
 
@@ -28,6 +34,10 @@
 
   @include vp-1023 {
     height: 805px;
+  }
+
+  @include vp-767 {
+    height: 760px;
   }
 }
 
