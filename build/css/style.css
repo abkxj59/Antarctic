@@ -441,9 +441,7 @@ body {
 html {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -593,14 +591,6 @@ button,
   flex-grow: 1;
 }
 
-.rouble {
-  font-family: "Rouble", "Arial", sans-serif;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -654,6 +644,7 @@ button,
   font-weight: 400;
   font-style: normal;
   color: #011C40;
+  scroll-behavior: smooth;
 }
 
 .page__body {
@@ -665,7 +656,7 @@ button,
   grid-template-rows: min-content 1fr min-content;
 }
 
-.page--menu-opened {
+.page__body--menu-opened {
   position: fixed;
   right: 0;
   left: 0;
@@ -684,6 +675,31 @@ button,
   margin-top: -5px;
   margin-bottom: 55px;
   text-align: center;
+}
+
+.page__overlay {
+  position: fixed;
+  border: none;
+  display: block;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 8;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease;
+  -o-transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease;
+  background-color: #002B66;
+}
+
+.page__body--menu-opened .page__overlay {
+  pointer-events: auto;
+  opacity: 0.5;
+  height: 100%;
 }
 
 .nav {
@@ -710,7 +726,7 @@ button,
   margin-right: 40px;
 }
 
-.nav__logo-img {
+.nav svg {
   display: block;
 }
 
@@ -744,7 +760,7 @@ button,
   margin-left: 0;
 }
 
-.nav__link {
+.nav__list a {
   display: block;
   color: inherit;
   font-size: 16px;
@@ -753,7 +769,7 @@ button,
   padding: 9px 0;
 }
 
-.nav__link:hover {
+.nav__list a:hover {
   color: #E3ECF6;
 }
 
@@ -771,7 +787,7 @@ button,
   height: 577px;
 }
 
-.promo__bg {
+.promo img {
   position: absolute;
   top: 0;
   z-index: -1;
@@ -781,20 +797,21 @@ button,
   width: 100%;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: #002A54;
 }
 
 .promo__container {
   padding-left: 115px;
 }
 
-.promo__heading {
+.promo h1 {
   margin: 0;
   padding-top: 195px;
   font-size: 54px;
   line-height: 66px;
 }
 
-.promo__text {
+.promo p {
   margin: 0;
   margin-top: 15px;
   font-size: 20px;
@@ -815,17 +832,17 @@ button,
   align-self: center;
 }
 
-.about__heading {
+.about h2 {
   text-align: start;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-.about__description {
+.about p {
   margin: 0;
 }
 
-.about__img {
+.about img {
   width: 100%;
   height: 301px;
   -o-object-fit: cover;
@@ -833,34 +850,21 @@ button,
 }
 
 .features {
-  display: -ms-grid;
-  display: grid;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  position: relative;
 }
 
-.features__bg {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-  width: 100%;
+.features img {
+  position: absolute;
+  background-color: #E3ECF6;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   -o-object-fit: cover;
   object-fit: cover;
   z-index: -1;
+  width: 100%;
   height: 562px;
-}
-
-.features__container {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
 }
 
 .features__list {
@@ -893,7 +897,7 @@ button,
   top: 38px;
 }
 
-.feature__heading {
+.feature h3 {
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
@@ -901,7 +905,7 @@ button,
   margin-bottom: 10px;
 }
 
-.feature__text {
+.feature p {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
@@ -925,14 +929,15 @@ button,
   position: relative;
 }
 
-.card__img {
+.card img {
   -o-object-fit: cover;
   object-fit: cover;
   height: 386px;
   width: 100%;
+  background-color: #5A8AC0;
 }
 
-.card__heading {
+.card h3 {
   position: absolute;
   top: 320px;
   left: 30px;
@@ -942,8 +947,8 @@ button,
   font-weight: 500;
 }
 
-.card:focus .card__heading,
-.card:hover .card__heading {
+.card:focus h3,
+.card:hover h3 {
   top: 12px;
   left: 25px;
 }
@@ -979,26 +984,30 @@ button,
   margin: 0;
 }
 
-.card__detail {
+.card dt {
   font-weight: 500;
 }
 
-.card__info {
+.card dd {
   margin: 0;
   margin-bottom: 10px;
 }
 
-.card__info:last-child {
+.card dd:last-child {
   margin-bottom: 0;
 }
 
-.card__button {
+.card a {
   display: block;
   color: #011C40;
   background-color: #F9FBFD;
   padding: 10px;
   text-align: center;
   font-weight: 600;
+}
+
+.card a:hover {
+  background-color: #E3ECF6;
 }
 
 .booking {
@@ -1020,6 +1029,7 @@ button,
 
 .booking img {
   position: absolute;
+  background-color: #D4ECF9;
   width: 100%;
   height: 555px;
   z-index: -1;
@@ -1053,7 +1063,7 @@ button,
   padding: 50px;
 }
 
-.form legend {
+.form h3 {
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
@@ -1169,6 +1179,10 @@ button,
 .contacts__map {
   width: 100%;
   height: 306px;
+}
+
+.contacts img {
+  background-color: #FBFAF6;
 }
 
 .contacts h2 {
@@ -1287,7 +1301,7 @@ button,
     margin-right: 25px;
   }
 
-  .nav__logo-img {
+  .nav svg {
     width: 38px;
     height: 20px;
   }
@@ -1296,7 +1310,7 @@ button,
     margin-left: 23px;
   }
 
-  .nav__link {
+  .nav__list a {
     font-size: 14px;
     padding: 0;
   }
@@ -1311,19 +1325,19 @@ button,
     height: 588px;
   }
 
-  .promo__bg {
+  .promo img {
     -webkit-filter: none;
     filter: none;
     height: 638px;
   }
 
-  .promo__heading {
+  .promo h1 {
     padding-top: 217px;
     font-size: 50px;
     line-height: 61px;
   }
 
-  .promo__text {
+  .promo p {
     margin-top: 15px;
     font-size: 18px;
     line-height: 20px;
@@ -1333,24 +1347,19 @@ button,
     gap: 30px;
   }
 
-  .about__heading {
+  .about h2 {
     margin-bottom: 16px;
   }
 
-  .about__description {
+  .about p {
     margin-bottom: 5px;
   }
 
-  .about__pic {
-    height: 95%;
-    padding-top: 10px;
-  }
-
-  .about__img {
+  .about img {
     height: 100%;
   }
 
-  .features__bg {
+  .features img {
     height: 588px;
   }
 
@@ -1379,7 +1388,7 @@ button,
     top: 29px;
   }
 
-  .feature__heading {
+  .feature h3 {
     line-height: 25px;
   }
 
@@ -1389,13 +1398,13 @@ button,
     padding-bottom: 10px;
   }
 
-  .card__heading {
+  .card h3 {
     top: 315px;
     left: 35px;
   }
 
-  .card:focus .card__heading,
-  .card:hover .card__heading {
+  .card:focus h3,
+  .card:hover h3 {
     left: 35px;
   }
 
@@ -1432,7 +1441,7 @@ button,
     margin: 0 auto;
   }
 
-  .form legend {
+  .form h3 {
     text-align: start;
   }
 
@@ -1477,6 +1486,10 @@ button,
     padding: 0 15px;
   }
 
+  .page__header {
+    min-height: 42px;
+  }
+
   .page__section-container {
     padding: 65px 15px;
   }
@@ -1504,6 +1517,7 @@ button,
     overflow: hidden;
     overflow-y: auto;
     width: auto;
+    z-index: 9;
   }
 
   .nav--nojs {
@@ -1525,7 +1539,7 @@ button,
     padding-left: 15px;
   }
 
-  .nav__logo-img {
+  .nav svg {
     width: 42px;
     height: 22px;
   }
@@ -1536,7 +1550,7 @@ button,
   }
 
   .nav__list {
-    margin-top: 43px;
+    margin-top: 35px;
     width: 100%;
   }
 
@@ -1546,7 +1560,7 @@ button,
     margin-bottom: 10px;
   }
 
-  .nav__link {
+  .nav__list a {
     font-size: 18px;
     line-height: 22px;
     padding: 10px 25px 8px;
@@ -1562,17 +1576,17 @@ button,
     height: 458px;
   }
 
-  .promo__bg {
+  .promo img {
     height: 500px;
   }
 
-  .promo__heading {
+  .promo h1 {
     padding-top: 135px;
     font-size: 36px;
     line-height: 45px;
   }
 
-  .promo__text {
+  .promo p {
     margin-top: 10px;
     font-size: 16px;
     line-height: 22px;
@@ -1582,23 +1596,19 @@ button,
     display: block;
   }
 
-  .about__heading {
+  .about h2 {
     margin-bottom: 15px;
   }
 
-  .about__description {
+  .about p {
     margin-bottom: 33px;
   }
 
-  .about__pic {
-    width: 100%;
-  }
-
-  .about__img {
+  .about img {
     min-height: 186px;
   }
 
-  .features__bg {
+  .features img {
     height: 997px;
   }
 
@@ -1612,7 +1622,7 @@ button,
     padding: 20px;
   }
 
-  .feature__heading {
+  .feature h3 {
     padding-right: 55px;
   }
 
@@ -1622,13 +1632,13 @@ button,
     padding: 0 10px;
   }
 
-  .card__heading {
+  .card h3 {
     top: 325px;
     left: 25px;
   }
 
-  .card:focus .card__heading,
-  .card:hover .card__heading {
+  .card:focus h3,
+  .card:hover h3 {
     top: 10px;
     left: 25px;
   }
@@ -1668,7 +1678,7 @@ button,
     padding: 40px 30px;
   }
 
-  .form legend {
+  .form h3 {
     text-align: center;
     line-height: 25px;
   }

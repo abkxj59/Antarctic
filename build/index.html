@@ -31,26 +31,27 @@
           </svg>
         </a>
         <button class="nav__toggle-button" type="button" hidden>
-          <img class="nav__toggle-img" src="img/svg/menu-open.svg" width="24" height="12">
+          <!-- 1x: 24px; 2x: 48px -->
+          <img class="nav__toggle-img" src="img/svg/menu-open.svg" width="24" height="12" alt="">
         </button>
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#">
+            <a class="nav__link" href="#features">
               Преимущества
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">
+            <a class="nav__link" href="#booking">
               Направления
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">
+            <a class="nav__link" href="#catalog">
               Ближайшие круизы
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">
+            <a class="nav__link" href="#contacts">
               Контакты
             </a>
           </li>
@@ -60,7 +61,11 @@
 
     <main class="page__main">
       <section class="page__section promo">
-        <img class="promo__bg" src="img/promo-bg-full.jpg" srcset="img/promo-bg-full@2x.jpg 2x" alt="" height="650">
+        <!-- 1x: 4000px; 2x: 8000px -->
+        <picture>
+          <source type="image/webp" srcset="img/promo-bg-full.webp 1x, img/promo-bg-full@2x.webp 2x">
+          <img class="promo__bg" src="img/promo-bg-full.jpg" srcset="img/promo-bg-full@2x.jpg 2x" alt="" height="650">
+        </picture>
         <div class="promo__container container">
           <h1 class="promo__heading">Круизы в&nbsp;Антарктику</h1>
           <p class="promo__text">Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
@@ -73,20 +78,20 @@
             <h2 class="page__section-heading about__heading">Путешествие на&nbsp;край&nbsp;Земли</h2>
             <p class="about__description">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
           </div>
+          <!-- 1x: 560px; 2x: 1020px -->
           <picture class="about__pic">
-            <!-- <source type="image/webp" srcset="img/penguins-desktop.webp 1x, img/penguins-desktop@2x.webp 2x"> -->
-            <!-- <source type="image/webp" media="(max-width: 1023px)" srcset="img/penguins-tablet.webp 1x, img/penguins-tablet@2x.webp 2x"> -->
-            <!-- <source type="image/webp" media="(max-width: 767px)" srcset="img/penguins-mobile.webp 1x, img/penguins-mobile@2x.webp 2x"> -->
-
+            <source type="image/webp" srcset="img/penguins-full.webp 1x, img/penguins-full@2x.webp 2x">
             <img class="about__img" src="img/penguins-full.jpg" srcset="img/penguins-full@2x.jpg 2x" alt="penguins" width="560" height="301">
-            <!-- <source media="(max-width: 1023px)" srcset="img/penguins-tablet.jpg 1x, img/penguins-tablet@2x.jpg 2x"> -->
-            <!-- <source media="(max-width: 767px)" srcset="img/penguins-mobile.jpg 1x, img/penguins-mobile@2x.jpg 2x"> -->
           </picture>
         </div>
       </section>
 
-      <section class="page__section features">
-        <img class="features__bg" src="img/features-bg-full.jpg" srcset="img/features-bg-full@2x.jpg 2x" height="562" alt="">
+      <section class="page__section features" id="features">
+        <!-- 1x: 4000px; 2x: 8000 -->
+        <picture>
+          <source type="image/webp" srcset="img/features-bg-full.webp 1x, img/features-bg-full@2x.webp 2x">
+          <img class="features__bg" src="img/features-bg-full.jpg" srcset="img/features-bg-full@2x.jpg 2x" height="562" alt="">
+        </picture>
         <div class="container features__container page__section-container">
           <h2 class="page__section-heading features__heading">Преимущества</h2>
           <ul class="features__list">
@@ -116,12 +121,16 @@
         </div>
       </section>
 
-      <section class="page__section catalog page__section-container container">
+      <section class="page__section catalog page__section-container container" id="catalog">
         <h2 class="page__section-heading catalog__heading">Ближайшие круизы</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="catalog__card card" tabindex="0">
-              <img class="card__img" src="img/cruise-1-full.jpg" srcset="img/cruise-1-full@2x.jpg 2x" alt="" width="260" height=" 386">
+              <!-- 1x: 260px, 2x: 520px -->
+              <picture>
+                <source type="image/webp" srcset="img/cruise-1-full.webp 1x, img/cruise-1-full@2x.webp 2x">
+                <img class="card__img" src="img/cruise-1-full.jpg" srcset="img/cruise-1-full@2x.jpg 2x" alt="" width="260" height="386">
+              </picture>
               <h3 class="card__heading">Круиз "Астория"</h3>
               <div class="card__details">
                 <dl class="card__details-list">
@@ -140,7 +149,11 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card card" tabindex="0">
-              <img class="card__img" src="img/cruise-3-full.jpg" srcset="img/cruise-3-full@2x.jpg 2x" alt="" width="260" height=" 386">
+              <!-- 1x: 260px, 2x: 520px -->
+              <picture>
+                <source type="image/webp" srcset="img/cruise-3-full.webp 1x, img/cruise-3-full@2x.webp 2x">
+                <img class="card__img" src="img/cruise-3-full.jpg" srcset="img/cruise-3-full@2x.jpg 2x" alt="" width="260" height="386">
+              </picture>
               <h3 class="card__heading">Круиз "Элайн"</h3>
               <div class="card__details">
                 <dl class="card__details-list">
@@ -159,7 +172,11 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card card" tabindex="0">
-              <img class="card__img" src="img/cruise-3-full.jpg" srcset="img/cruise-3-full@2x.jpg 2x" alt="" width="260" height=" 386">
+              <!-- 1x: 260px, 2x: 520px -->
+              <picture>
+                <source type="image/webp" srcset="img/cruise-3-full.webp 1x, img/cruise-3-full@2x.webp 2x">
+                <img class="card__img" src="img/cruise-3-full.jpg" srcset="img/cruise-3-full@2x.jpg 2x" alt="" width="260" height="386">
+              </picture>
               <h3 class="card__heading">Круиз "Атлантис"</h3>
               <div class="card__details">
                 <dl class="card__details-list">
@@ -178,7 +195,11 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card card" tabindex="0">
-              <img class="card__img" src="img/cruise-4-full.jpg" srcset="img/cruise-4-full@2x.jpg 2x" alt="" width="260" height=" 386">
+              <!-- 1x: 260px, 2x: 520px -->
+              <picture>
+                <source type="image/webp" srcset="img/cruise-4-full.webp 1x, img/cruise-4-full@2x.webp 2x">
+                <img class="card__img" src="img/cruise-4-full.jpg" srcset="img/cruise-4-full@2x.jpg 2x" alt="" width="260" height="386">
+              </picture>
               <h3 class="card__heading">Круиз "Одиссей"</h3>
               <div class="card__details">
                 <dl class="card__details-list">
@@ -197,7 +218,11 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card card" tabindex="0">
-              <img class="card__img" src="img/cruise-5-full.jpg" srcset="img/cruise-5-full@2x.jpg 2x" alt="" width="260" height=" 386">
+              <!-- 1x: 260px, 2x: 520px -->
+              <picture>
+                <source type="image/webp" srcset="img/cruise-5-full.webp 1x, img/cruise-5-full@2x.webp 2x">
+                <img class="card__img" src="img/cruise-5-full.jpg" srcset="img/cruise-5-full@2x.jpg 2x" alt="" width="260" height="386">
+              </picture>
               <h3 class="card__heading">Круиз "Олимпия"</h3>
               <div class="card__details">
                 <dl class="card__details-list">
@@ -216,7 +241,11 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card card" tabindex="0">
-              <img class="card__img" src="img/cruise-6-full.jpg" srcset="img/cruise-6-full@2x.jpg 2x" alt="" width="260" height=" 386">
+              <!-- 1x: 260px, 2x: 520px -->
+              <picture>
+                <source type="image/webp" srcset="img/cruise-6-full.webp 1x, img/cruise-6-full@2x.webp 2x">
+                <img class="card__img" src="img/cruise-6-full.jpg" srcset="img/cruise-6-full@2x.jpg 2x" alt="" width="260" height="386">
+              </picture>
               <h3 class="card__heading">Круиз "Аврора"</h3>
               <div class="card__details">
                 <dl class="card__details-list">
@@ -235,7 +264,11 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card card" tabindex="0">
-              <img class="card__img" src="img/cruise-7-full.jpg" srcset="img/cruise-7-full@2x.jpg 2x" alt="" width="260" height=" 386">
+              <!-- 1x: 260px, 2x: 520px -->
+              <picture>
+                <source type="image/webp" srcset="img/cruise-7-full.webp 1x, img/cruise-7-full@2x.webp 2x">
+                <img class="card__img" src="img/cruise-7-full.jpg" srcset="img/cruise-7-full@2x.jpg 2x" alt="" width="260" height="386">
+              </picture>
               <h3 class="card__heading">Круиз "Леонор"</h3>
               <div class="card__details">
                 <dl class="card__details-list">
@@ -254,7 +287,11 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card card" tabindex="0">
-              <img class="card__img" src="img/cruise-8-full.jpg" srcset="img/cruise-8-full@2x.jpg 2x" alt="" width="260" height=" 386">
+              <!-- 1x: 260px, 2x: 520px -->
+              <picture>
+                <source type="image/webp" srcset="img/cruise-8-full.webp 1x, img/cruise-8-full@2x.webp 2x">
+                <img class="card__img" src="img/cruise-8-full.jpg" srcset="img/cruise-8-full@2x.jpg 2x" alt="" width="260" height="386">
+              </picture>
               <h3 class="card__heading">Круиз "Минион - 1"</h3>
               <div class="card__details">
                 <dl class="card__details-list">
@@ -274,28 +311,36 @@
         </ul>
       </section>
 
-      <section class="page__section booking">
-        <img class="booking__bg" src="img/booking-bg-desktop.jpg" srcset="img/booking-bg-desktop@2x.jpg 2x" alt="" height="555">
+      <section class="page__section booking" id="booking">
+        <!-- 1x: 2732px, 2x: 5464px -->
+        <picture>
+          <source type="image/webp" srcset="img/booking-bg-desktop.webp 1x, img/booking-bg-desktop@2x.webp 2x">
+          <img class="booking__bg" src="img/booking-bg-desktop.jpg" srcset="img/booking-bg-desktop@2x.jpg 2x" alt="" height="555">
+        </picture>
         <div class="container page__section-container booking__container">
           <div class="booking__text">
             <h2 class="booking__heading page__section-heading">Раннее бронирование</h2>
             <p class="booking__info">Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты выезда и сэкономьте до 50%</p>
           </div>
           <form class="booking__form form">
-            <legend class="form__legend">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</legend>
-            <input type="text" placeholder="Имя" name="name">
-            <input type="tel" placeholder="Телефон" name="phone">
-            <input type="email" placeholder="Email" name="email">
-            <input type="checkbox" checked name="agreement" id="agreement">
+            <h3 class="form__legend">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+            <input type="text" placeholder="Имя" name="name" required>
+            <input type="tel" placeholder="Телефон" name="phone" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="checkbox" checked name="agreement" id="agreement" required>
             <label for="agreement">Я согласен на обработку моих&nbsp;персональный данных</label>
             <button type="submit">Оставить заявку</button>
           </form>
         </div>
       </section>
 
-      <section class="page__section page__section-container container contacts">
+      <section class="page__section page__section-container container contacts" id="contacts">
         <div class="contacts__map" id="map">
-          <img class="contacts__map-img" src="img/map-desktop.jpg" srcset="img/map-desktop@2x.jpg 2x" width="560" height="306" alt="Местонахождение">
+          <!-- 1x: 560px; 2x: 1020px; -->
+          <picture>
+            <source type="image/webp" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <img class="contacts__map-img" src="img/map-desktop.jpg" srcset="img/map-desktop@2x.jpg 2x" width="560" height="306" alt="Местонахождение">
+          </picture>
         </div>
         <div class="contacts__text">
           <h2 class="contacts__heading">У вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы вам все расскажем.</h2>
@@ -323,8 +368,8 @@
       <div class="container page-footer__container">
         <div class="page-footer__nav nav nav--footer">
           <a class="nav__logo">
-            <svg class="nav__logo-img" width="70" height="38" aria-labelledby="logo">
-              <title id="logo">
+            <svg class="nav__logo-img" width="70" height="38" aria-labelledby="footer-logo">
+              <title id="footer-logo">
                 Antarctic logo
               </title>
               <use xlink:href="img/sprite_auto.svg#logo"></use>
@@ -332,22 +377,22 @@
           </a>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#">
+              <a class="nav__link" href="#features">
                 Преимущества
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">
+              <a class="nav__link" href="#booking">
                 Направления
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">
+              <a class="nav__link" href="#catalog">
                 Ближайшие круизы
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">
+              <a class="nav__link" href="#contacts">
                 Контакты
               </a>
             </li>
@@ -384,8 +429,9 @@
       </div>
     </footer>
 
-      <!-- <script src="js/vendor.min.js"></script> -->
-      <script src="https://api-maps.yandex.ru/2.1/?apikey=ee9a33b2-7186-4797-a937-a57238932550&lang=ru_RU" type="text/javascript"></script>
-      <script src="js/main.min.js"></script>
+    <div class="page__overlay"></div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ee9a33b2-7186-4797-a937-a57238932550&lang=ru_RU"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

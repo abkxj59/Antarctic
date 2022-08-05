@@ -29,6 +29,7 @@
     overflow: hidden;
     overflow-y: auto;
     width: auto;
+    z-index: 9;
   }
 }
 
@@ -73,7 +74,7 @@
   }
 }
 
-.nav__logo-img {
+.nav svg {
   display: block;
 
   @include vp-1023 {
@@ -111,7 +112,7 @@
   padding: 0;
 
   @include vp-767 {
-    margin-top: 43px;
+    margin-top: 35px;
     width: 100%;
   }
 }
@@ -134,7 +135,7 @@
   }
 }
 
-.nav__link {
+.nav__list a {
   display: block;
   color: inherit;
   font-size: 16px;

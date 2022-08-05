@@ -3,13 +3,14 @@
   position: relative;
 }
 
-.card__img {
+.card img {
   object-fit: cover;
   height: 386px;
   width: 100%;
+  background-color: $card-bg-color;
 }
 
-.card__heading {
+.card h3 {
   position: absolute;
   top: 320px;
   left: 30px;
@@ -29,8 +30,8 @@
   }
 }
 
-.card:focus .card__heading,
-.card:hover .card__heading {
+.card:focus h3,
+.card:hover h3 {
   top: 12px;
   left: 25px;
 
@@ -80,11 +81,11 @@
   margin: 0;
 }
 
-.card__detail {
+.card dt {
   font-weight: 500;
 }
 
-.card__info {
+.card dd {
   margin: 0;
   margin-bottom: 10px;
 
@@ -93,11 +94,15 @@
   }
 }
 
-.card__button {
+.card a {
   display: block;
   color: $base-blue;
   background-color: $base-white;
   padding: 10px;
   text-align: center;
   font-weight: 600;
+
+  &:hover {
+    background-color: $features-bg-color;
+  }
 }

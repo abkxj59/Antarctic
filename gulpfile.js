@@ -115,9 +115,10 @@ const refresh = (done) => {
   done();
 };
 
-const build = gulp.series(clean, svgo, copy, css, sprite, js);
+const build = gulp.series(clean, gulp.parallel(svgo, css, copy, sprite, js));
 
 const start = gulp.series(build, syncServer);
+
 
 // Optional tasks
 //---------------------------------

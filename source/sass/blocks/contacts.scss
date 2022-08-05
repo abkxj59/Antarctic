@@ -30,6 +30,8 @@
 }
 
 .contacts img {
+  background-color: $map-bg-color;
+
   @include vp-1023 {
     width: 324px;
     height: 335px;
