@@ -30,7 +30,7 @@
             <use xlink:href="img/sprite_auto.svg#logo"></use>
           </svg>
         </a>
-        <button class="nav__toggle-button" type="button" hidden>
+        <button class="nav__toggle-button" type="button" hidden aria-label="Открыть/закрыть меню">
           <!-- 1x: 24px; 2x: 48px -->
           <img class="nav__toggle-img" src="img/svg/menu-open.svg" width="24" height="12" alt="">
         </button>
@@ -324,9 +324,12 @@
           </div>
           <form class="booking__form form">
             <h3 class="form__legend">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
-            <input type="text" placeholder="Имя" name="name" required>
-            <input type="tel" placeholder="Телефон" name="phone" required>
-            <input type="email" placeholder="Email" name="email" required>
+            <label class="visually-hidden" for="name">Имя</label>
+            <input type="text" placeholder="Имя" name="name" id="name" required>
+            <label class="visually-hidden" for="phone">Телефон</label>
+            <input type="tel" placeholder="Телефон" name="phone" id="phone" required>
+            <label class="visually-hidden" for="email">Email</label>
+            <input type="email" placeholder="Email" name="email" id="email" required>
             <input type="checkbox" checked name="agreement" id="agreement" required>
             <label for="agreement">Я согласен на обработку моих&nbsp;персональный данных</label>
             <button type="submit">Оставить заявку</button>

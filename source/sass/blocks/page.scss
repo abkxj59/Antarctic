@@ -37,6 +37,7 @@
     padding: 65px 15px;
   }
 }
+
 .page__section-heading {
   font-size: 28px;
   line-height: 30px;
@@ -75,9 +76,9 @@
   z-index: 8;
   opacity: 0;
   transition: opacity 0.15s ease;
-  background-color: #002B66;
-
+  background-color: #002b66;
 }
+
 .page__body--menu-opened .page__overlay {
   pointer-events: auto;
   opacity: 0.5;

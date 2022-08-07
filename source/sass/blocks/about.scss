@@ -26,6 +26,7 @@
   }
 
   @include vp-767 {
+    margin-top: -8px;
     margin-bottom: 15px;
   }
 }
@@ -41,17 +42,6 @@
     margin-bottom: 33px;
   }
 }
-
-// .about__pic {
-//   @include vp-1023 {
-//     height: 95%;
-//     padding-top: 10px;
-//   }
-
-//   @include vp-767 {
-//     width: 100%;
-//   }
-// }
 
 .about img {
   width: 100%;

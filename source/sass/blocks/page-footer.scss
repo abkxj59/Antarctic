@@ -21,9 +21,9 @@
 
 .page-footer__social {
   width: min-content;
+
   @include vp-767 {
     margin-top: 10px;
     margin-bottom: -5px;
   }
 }
-

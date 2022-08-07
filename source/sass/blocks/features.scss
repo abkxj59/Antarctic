@@ -1,5 +1,14 @@
 .features {
   position: relative;
+  min-height: 562px;
+
+  @include vp-1023 {
+    min-height: 588px;
+  }
+
+  @include vp-767 {
+    min-height: 997px;
+  }
 }
 
 .features img {

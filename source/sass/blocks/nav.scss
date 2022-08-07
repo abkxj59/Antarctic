@@ -38,7 +38,6 @@
     position: static;
     display: block;
     margin: 0;
-    // min-height: min-content;
   }
 }
 
@@ -54,7 +53,7 @@
   }
 }
 
-.nav--closed  .nav__list {
+.nav--closed .nav__list {
   @include vp-767 {
     display: none;
   }
@@ -142,6 +141,7 @@
   line-height: 20px;
   font-weight: 500;
   padding: 9px 0;
+  user-select: none;
 
   &:hover {
     color: $features-bg-color;

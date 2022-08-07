@@ -643,7 +643,7 @@ button,
   line-height: 24px;
   font-weight: 400;
   font-style: normal;
-  color: #011C40;
+  color: #011c40;
   scroll-behavior: smooth;
 }
 
@@ -693,7 +693,7 @@ button,
   -webkit-transition: opacity 0.15s ease;
   -o-transition: opacity 0.15s ease;
   transition: opacity 0.15s ease;
-  background-color: #002B66;
+  background-color: #002b66;
 }
 
 .page__body--menu-opened .page__overlay {
@@ -713,7 +713,7 @@ button,
   justify-content: space-between;
   -ms-flex-line-pack: start;
   align-content: flex-start;
-  color: #F9FBFD;
+  color: #f9fbfd;
   padding-top: 35px;
 }
 
@@ -767,10 +767,14 @@ button,
   line-height: 20px;
   font-weight: 500;
   padding: 9px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .nav__list a:hover {
-  color: #E3ECF6;
+  color: #e3ecf6;
 }
 
 .nav--footer .nav__logo {
@@ -783,7 +787,7 @@ button,
 
 .promo {
   padding: 0;
-  color: #F9FBFD;
+  color: #f9fbfd;
   height: 577px;
 }
 
@@ -795,9 +799,9 @@ button,
   object-fit: cover;
   height: 650px;
   width: 100%;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background-color: #002A54;
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: #002a54;
 }
 
 .promo__container {
@@ -851,11 +855,12 @@ button,
 
 .features {
   position: relative;
+  min-height: 562px;
 }
 
 .features img {
   position: absolute;
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
   top: 0;
   bottom: 0;
   right: 0;
@@ -879,7 +884,7 @@ button,
 }
 
 .feature {
-  background-color: #F9FBFD;
+  background-color: #f9fbfd;
   padding: 30px;
   padding-bottom: 25px;
   position: relative;
@@ -925,7 +930,7 @@ button,
 }
 
 .card {
-  color: #F9FBFD;
+  color: #f9fbfd;
   position: relative;
 }
 
@@ -934,7 +939,7 @@ button,
   object-fit: cover;
   height: 386px;
   width: 100%;
-  background-color: #5A8AC0;
+  background-color: #5a8ac0;
 }
 
 .card h3 {
@@ -955,7 +960,7 @@ button,
 
 .card__details {
   display: none;
-  background-color: #011C40;
+  background-color: #011c40;
   padding: 70px 25px 35px;
   font-size: 14px;
   line-height: 21px;
@@ -999,15 +1004,15 @@ button,
 
 .card a {
   display: block;
-  color: #011C40;
-  background-color: #F9FBFD;
+  color: #011c40;
+  background-color: #f9fbfd;
   padding: 10px;
   text-align: center;
   font-weight: 600;
 }
 
 .card a:hover {
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
 }
 
 .booking {
@@ -1029,7 +1034,7 @@ button,
 
 .booking img {
   position: absolute;
-  background-color: #D4ECF9;
+  background-color: #d4ecf9;
   width: 100%;
   height: 555px;
   z-index: -1;
@@ -1057,9 +1062,9 @@ button,
 }
 
 .form {
-  background-color: #011C40;
-  -webkit-box-shadow: 0px 4px 45px rgba(1, 28, 64, 0.15);
-  box-shadow: 0px 4px 45px rgba(1, 28, 64, 0.15);
+  background-color: #011c40;
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
   padding: 50px;
 }
 
@@ -1067,7 +1072,7 @@ button,
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
-  color: #F9FBFD;
+  color: #f9fbfd;
   margin-top: -5px;
   margin-bottom: 27px;
 }
@@ -1075,7 +1080,7 @@ button,
 .form input {
   display: block;
   width: 100%;
-  background-color: #F9FBFD;
+  background-color: #f9fbfd;
   border: none;
   margin-bottom: 20px;
   padding: 11px 16px;
@@ -1084,11 +1089,11 @@ button,
 }
 
 .form input:hover {
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
 }
 
 .form input:focus {
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
   outline: 0;
 }
 
@@ -1126,7 +1131,7 @@ button,
   margin-bottom: 30px;
   font-size: 10px;
   line-height: 12px;
-  color: #F9FBFD;
+  color: #f9fbfd;
 }
 
 .form input[type="checkbox"] + label::before {
@@ -1134,14 +1139,14 @@ button,
   content: "";
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #F9FBFD;
+  background-color: #f9fbfd;
   width: 18px;
   height: 18px;
   margin-right: 5px;
 }
 
 .form input[type="checkbox"] + label:hover::before {
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
 }
 
 .form input[type="checkbox"]:checked + label::before {
@@ -1152,17 +1157,21 @@ button,
 
 .form button {
   border: none;
-  background-color: #F9FBFD;
-  color: #011C40;
+  background-color: #f9fbfd;
+  color: #011c40;
   width: 100%;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
   padding: 11px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .form button:hover {
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
 }
 
 .contacts {
@@ -1182,7 +1191,7 @@ button,
 }
 
 .contacts img {
-  background-color: #FBFAF6;
+  background-color: #fbfaf6;
 }
 
 .contacts h2 {
@@ -1197,7 +1206,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #011C40;
+  color: #011c40;
   margin-bottom: 20px;
 }
 
@@ -1216,7 +1225,7 @@ button,
 }
 
 .page-footer {
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .page-footer__container {
@@ -1259,11 +1268,11 @@ button,
 }
 
 .social a {
-  color: #F9FBFD;
+  color: #f9fbfd;
 }
 
 .social a:hover {
-  color: #E3ECF6;
+  color: #e3ecf6;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -1357,6 +1366,10 @@ button,
 
   .about img {
     height: 100%;
+  }
+
+  .features {
+    min-height: 588px;
   }
 
   .features img {
@@ -1512,8 +1525,8 @@ button,
     right: 0;
     left: 35px;
     bottom: 0;
-    background-color: #F9FBFD;
-    color: #011C40;
+    background-color: #f9fbfd;
+    color: #011c40;
     overflow: hidden;
     overflow-y: auto;
     width: auto;
@@ -1597,6 +1610,7 @@ button,
   }
 
   .about h2 {
+    margin-top: -8px;
     margin-bottom: 15px;
   }
 
@@ -1606,6 +1620,10 @@ button,
 
   .about img {
     min-height: 186px;
+  }
+
+  .features {
+    min-height: 997px;
   }
 
   .features img {
