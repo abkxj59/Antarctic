@@ -73,7 +73,7 @@
   }
 }
 
-.nav svg {
+.nav__logo svg {
   display: block;
 
   @include vp-1023 {
@@ -96,6 +96,10 @@
     display: block;
     padding-right: 15px;
   }
+}
+
+.nav--closed .nav__close-img {
+  visibility: hidden;
 }
 
 .nav--opened .nav__toggle-img {

@@ -31,8 +31,11 @@
           </svg>
         </a>
         <button class="nav__toggle-button" type="button" hidden aria-label="Открыть/закрыть меню">
-          <!-- 1x: 24px; 2x: 48px -->
-          <img class="nav__toggle-img" src="img/svg/menu-open.svg" width="24" height="12" alt="">
+          <svg class="nav__toggle-img" width="24" height="13" aria-labelledby="toggle-menu-button">
+            <title id="toggle-menu-button">Открыть/закрыть меню</title>
+            <use class="nav__open-img" xlink:href="img/sprite_auto.svg#menu-open"></use>
+            <use class="nav__close-img" xlink:href="img/sprite_auto.svg#menu-close"></use>
+          </svg>
         </button>
         <ul class="nav__list">
           <li class="nav__item">
