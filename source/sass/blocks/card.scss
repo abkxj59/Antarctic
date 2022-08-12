@@ -1,18 +1,33 @@
 .card {
   color: $base-white;
   position: relative;
+  width: 100%;
+  padding-top: 148%;
+
+  @include vp-1023 {
+    height: 386px;
+    padding: 0;
+  }
+}
+
+.card picture {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .card img {
   object-fit: cover;
-  height: 386px;
+  height: 100%;
   width: 100%;
   background-color: $card-bg-color;
 }
 
 .card h3 {
   position: absolute;
-  top: 320px;
+  top: 83%;
   left: 30px;
   z-index: 5;
   font-size: 18px;
@@ -30,18 +45,24 @@
   }
 }
 
-.card:focus h3,
+.card:focus-within h3,
 .card:hover h3 {
-  top: 12px;
-  left: 25px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $base-blue;
 
   @include vp-1023 {
-    left: 35px;
+    padding-left: 35px;
   }
 
   @include vp-767 {
-    top: 10px;
-    left: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
   }
 }
 
@@ -52,7 +73,8 @@
   font-size: 14px;
   line-height: 21px;
   width: 100%;
-  min-height: 386px;
+  height: 100%;
+  overflow: auto;
 
   @include vp-1023 {
     padding-left: 35px;
@@ -67,7 +89,7 @@
 }
 
 .card:hover .card__details,
-.card:focus .card__details {
+.card:focus-within .card__details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -88,10 +110,6 @@
 .card dd {
   margin: 0;
   margin-bottom: 10px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .card a {
@@ -102,7 +120,8 @@
   text-align: center;
   font-weight: 600;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $features-bg-color;
   }
 }

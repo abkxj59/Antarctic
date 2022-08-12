@@ -8,12 +8,12 @@
   justify-content: space-around;
 
   @include vp-1023 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 309px);
     padding-bottom: 10px;
   }
 
   @include vp-767 {
-    grid-template-columns: auto;
+    grid-template-columns: 270px;
     padding: 0 10px;
   }
 }

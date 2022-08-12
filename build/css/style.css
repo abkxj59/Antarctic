@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -654,13 +656,7 @@ button,
   -ms-grid-rows: min-content 1fr min-content;
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
-}
-
-.page__body--menu-opened {
-  position: fixed;
-  right: 0;
-  left: 0;
-  overflow: hidden;
+  position: relative;
 }
 
 .page__section-container {
@@ -706,8 +702,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -715,6 +711,15 @@ button,
   align-content: flex-start;
   color: #f9fbfd;
   padding-top: 35px;
+}
+
+.nav--header {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
 }
 
 .nav--footer {
@@ -733,6 +738,10 @@ button,
 .nav__toggle-button {
   border: none;
   background: none;
+  display: none;
+}
+
+.nav--nojs .nav__toggle-button {
   display: none;
 }
 
@@ -790,18 +799,19 @@ button,
 }
 
 .promo {
+  position: relative;
   padding: 0;
+  padding-bottom: 20px;
   color: #f9fbfd;
-  height: 577px;
+  min-height: 650px;
 }
 
 .promo img {
   position: absolute;
-  top: 0;
   z-index: -1;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 650px;
+  height: 100%;
   width: 100%;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
@@ -814,7 +824,7 @@ button,
 
 .promo h1 {
   margin: 0;
-  padding-top: 195px;
+  padding-top: 270px;
   font-size: 54px;
   line-height: 66px;
 }
@@ -865,15 +875,11 @@ button,
 .features img {
   position: absolute;
   background-color: #e3ecf6;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
   -o-object-fit: cover;
   object-fit: cover;
   z-index: -1;
   width: 100%;
-  height: 562px;
+  height: 100%;
 }
 
 .features__list {
@@ -936,19 +942,29 @@ button,
 .card {
   color: #f9fbfd;
   position: relative;
+  width: 100%;
+  padding-top: 148%;
+}
+
+.card picture {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .card img {
   -o-object-fit: cover;
   object-fit: cover;
-  height: 386px;
+  height: 100%;
   width: 100%;
   background-color: #5a8ac0;
 }
 
 .card h3 {
   position: absolute;
-  top: 320px;
+  top: 83%;
   left: 30px;
   z-index: 5;
   font-size: 18px;
@@ -956,10 +972,16 @@ button,
   font-weight: 500;
 }
 
-.card:focus h3,
+.card:focus-within h3,
 .card:hover h3 {
-  top: 12px;
-  left: 25px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #011c40;
 }
 
 .card__details {
@@ -969,11 +991,12 @@ button,
   font-size: 14px;
   line-height: 21px;
   width: 100%;
-  min-height: 386px;
+  height: 100%;
+  overflow: auto;
 }
 
 .card:hover .card__details,
-.card:focus .card__details {
+.card:focus-within .card__details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1002,10 +1025,6 @@ button,
   margin-bottom: 10px;
 }
 
-.card dd:last-child {
-  margin-bottom: 0;
-}
-
 .card a {
   display: block;
   color: #011c40;
@@ -1015,14 +1034,15 @@ button,
   font-weight: 600;
 }
 
-.card a:hover {
+.card a:hover,
+.card a:focus {
   background-color: #e3ecf6;
 }
 
 .booking {
   position: relative;
   text-align: start;
-  min-height: 505px;
+  min-height: 555px;
 }
 
 .booking__container {
@@ -1040,7 +1060,7 @@ button,
   position: absolute;
   background-color: #d4ecf9;
   width: 100%;
-  height: 555px;
+  height: 100%;
   z-index: -1;
   -o-object-fit: cover;
   object-fit: cover;
@@ -1048,6 +1068,8 @@ button,
 
 .booking__form {
   width: 403px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .booking h2 {
@@ -1121,10 +1143,6 @@ button,
   color: rgba(1, 28, 64, 0.7);
 }
 
-.form input[type="checkbox"] {
-  display: none;
-}
-
 .form input[type="checkbox"] + label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1136,6 +1154,11 @@ button,
   font-size: 10px;
   line-height: 12px;
   color: #f9fbfd;
+  cursor: pointer;
+}
+
+.form input[type="checkbox"] {
+  width: 0;
 }
 
 .form input[type="checkbox"] + label::before {
@@ -1159,6 +1182,18 @@ button,
   background-position: 50%;
 }
 
+.form input[type="checkbox"]:invalid + label::after {
+  content: "Поставьте согласие";
+  color: #ff6347;
+}
+
+.form input[type="checkbox"]:focus + label {
+  outline-color: rgba(131, 38, 132, 0.65);
+  outline-offset: 1px;
+  outline-style: auto;
+  outline-width: 1px;
+}
+
 .form button {
   border: none;
   background-color: #f9fbfd;
@@ -1172,6 +1207,7 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 
 .form button:hover {
@@ -1191,7 +1227,8 @@ button,
 
 .contacts__map {
   width: 100%;
-  height: 306px;
+  height: 100%;
+  min-height: 306px;
 }
 
 .contacts img {
@@ -1212,6 +1249,9 @@ button,
   display: flex;
   color: #011c40;
   margin-bottom: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .contacts a:last-child {
@@ -1248,9 +1288,7 @@ button,
 }
 
 .page-footer__social {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  max-width: 300px;
 }
 
 .social__list {
@@ -1258,6 +1296,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   margin-top: 5px;
@@ -1267,10 +1307,6 @@ button,
   margin-left: 28px;
 }
 
-.social__item:first-child {
-  margin: 0;
-}
-
 .social a {
   color: #f9fbfd;
 }
@@ -1278,13 +1314,6 @@ button,
 .social a:hover {
   color: #e3ecf6;
 }
-
-/* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
-  &:focus {
-    color: $color-default-white;
-  }
-} */
 
 @media (max-width: 1023px) {
   .container {
@@ -1335,17 +1364,17 @@ button,
 
   .promo {
     padding: 0;
-    height: 588px;
+    padding-bottom: 20px;
+    min-height: 638px;
   }
 
   .promo img {
     -webkit-filter: none;
     filter: none;
-    height: 638px;
   }
 
   .promo h1 {
-    padding-top: 217px;
+    padding-top: 265px;
     font-size: 50px;
     line-height: 61px;
   }
@@ -1374,10 +1403,6 @@ button,
 
   .features {
     min-height: 588px;
-  }
-
-  .features img {
-    height: 588px;
   }
 
   .features__list {
@@ -1410,9 +1435,14 @@ button,
   }
 
   .catalog__list {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (309px)[2];
+    grid-template-columns: repeat(2, 309px);
     padding-bottom: 10px;
+  }
+
+  .card {
+    height: 386px;
+    padding: 0;
   }
 
   .card h3 {
@@ -1420,9 +1450,9 @@ button,
     left: 35px;
   }
 
-  .card:focus h3,
+  .card:focus-within h3,
   .card:hover h3 {
-    left: 35px;
+    padding-left: 35px;
   }
 
   .card__details {
@@ -1438,10 +1468,6 @@ button,
 
   .booking__container {
     display: block;
-  }
-
-  .booking img {
-    height: 805px;
   }
 
   .booking__form {
@@ -1471,7 +1497,7 @@ button,
   }
 
   .contacts__map {
-    height: 335px;
+    min-height: 335px;
   }
 
   .contacts img {
@@ -1489,6 +1515,10 @@ button,
     min-height: 120px;
   }
 
+  .page-footer__social {
+    max-width: 150px;
+  }
+
   .social__item {
     margin-left: 19px;
   }
@@ -1503,8 +1533,11 @@ button,
     padding: 0 15px;
   }
 
-  .page__header {
-    min-height: 42px;
+  .page__body--menu-opened {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
   }
 
   .page__section-container {
@@ -1519,14 +1552,20 @@ button,
   }
 
   .nav {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 0;
     padding-top: 20px;
+    z-index: 10;
   }
 
   .nav--opened {
     position: absolute;
     top: 0;
     right: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
     left: 35px;
     bottom: 0;
     background-color: #f9fbfd;
@@ -1590,15 +1629,17 @@ button,
 
   .promo {
     padding: 0;
-    height: 458px;
+    padding-bottom: 20px;
+    min-height: 500px;
   }
 
-  .promo img {
-    height: 500px;
+  .promo--nojs {
+    padding-top: 40px;
+    margin-bottom: 40px;
   }
 
   .promo h1 {
-    padding-top: 135px;
+    padding-top: 175px;
     font-size: 36px;
     line-height: 45px;
   }
@@ -1630,10 +1671,6 @@ button,
     min-height: 997px;
   }
 
-  .features img {
-    height: 997px;
-  }
-
   .features__list {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
@@ -1649,8 +1686,8 @@ button,
   }
 
   .catalog__list {
-    -ms-grid-columns: auto;
-    grid-template-columns: auto;
+    -ms-grid-columns: 270px;
+    grid-template-columns: 270px;
     padding: 0 10px;
   }
 
@@ -1659,10 +1696,10 @@ button,
     left: 25px;
   }
 
-  .card:focus h3,
+  .card:focus-within h3,
   .card:hover h3 {
-    top: 10px;
-    left: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
   }
 
   .card__details {
@@ -1673,10 +1710,6 @@ button,
 
   .booking {
     min-height: 760px;
-  }
-
-  .booking img {
-    height: 760px;
   }
 
   .booking__form {
@@ -1723,7 +1756,7 @@ button,
   }
 
   .contacts__map {
-    height: 316px;
+    min-height: 316px;
   }
 
   .contacts img {
@@ -1745,7 +1778,12 @@ button,
   }
 
   .page-footer__social {
+    max-width: 300px;
     margin-top: 10px;
     margin-bottom: -5px;
+  }
+
+  .social__item:first-child {
+    margin: 0;
   }
 }

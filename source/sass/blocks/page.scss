@@ -11,18 +11,15 @@
 .page__body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+  position: relative;
 }
 
 .page__body--menu-opened {
-  position: fixed;
-  right: 0;
-  left: 0;
-  overflow: hidden;
-}
-
-.page__header {
   @include vp-767 {
-    min-height: 42px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
   }
 }
 

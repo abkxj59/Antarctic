@@ -6,12 +6,13 @@ function init() {
     center: [59.938635, 30.323118],
     zoom: 16,
   });
+  myMap.controls.remove('searchControl');
 
   const myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {
     hintContent: 'офис Антарктика',
   }, {
     iconLayout: 'default#image',
-    iconImageHref: '../img/svg/icon-location.svg',
+    iconImageHref: 'img/svg/icon-location.svg',
     iconImageSize: [18, 22],
     iconImageOffset: [-9, -22],
   });

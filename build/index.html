@@ -17,11 +17,10 @@
     <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page__header page-header">
-      <nav class="page-header__nav nav nav--opened nav--nojs container">
+      <nav class="page-header__nav nav nav--header nav--opened nav--nojs container">
         <a class="nav__logo">
           <svg class="nav__logo-img" width="70" height="38" aria-labelledby="logo">
             <title id="logo">
@@ -63,10 +62,13 @@
     </header>
 
     <main class="page__main">
-      <section class="page__section promo">
+      <section class="page__section promo promo--nojs">
         <!-- 1x: 4000px; 2x: 8000px -->
         <picture>
+          <source media="(max-width: 767px)" type="image/webp" srcset="img/promo-bg-mobile.webp 1x, img/promo-bg-mobile@2x.webp 2x">
           <source type="image/webp" srcset="img/promo-bg-full.webp 1x, img/promo-bg-full@2x.webp 2x">
+
+          <source media="(max-width: 767px)" srcset="img/promo-bg-mobile.jpg 1x, img/promo-bg-mobile@2x.jpg 2x">
           <img class="promo__bg" src="img/promo-bg-full.jpg" srcset="img/promo-bg-full@2x.jpg 2x" alt="" height="650">
         </picture>
         <div class="promo__container container">
@@ -146,7 +148,7 @@
                   <dt class="card__detail">Цена</dt>
                   <dd class="card__info">от 11500 $</dd>
                 </dl>
-                <a class="card__button" href="">Забронировать</a>
+                <a class="card__button" href="" tabindex="0">Забронировать</a>
               </div>
             </article>
           </li>
@@ -169,7 +171,7 @@
                   <dt class="card__detail">Цена</dt>
                   <dd class="card__info">от 14500 $</dd>
                 </dl>
-                <a class="card__button" href="">Забронировать</a>
+                <a class="card__button" href="" tabindex="0">Забронировать</a>
               </div>
             </article>
           </li>
@@ -192,7 +194,7 @@
                   <dt class="card__detail">Цена</dt>
                   <dd class="card__info">от 14500 $</dd>
                 </dl>
-                <a class="card__button" href="">Забронировать</a>
+                <a class="card__button" href="" tabindex="0">Забронировать</a>
               </div>
             </article>
           </li>
@@ -215,7 +217,7 @@
                   <dt class="card__detail">Цена</dt>
                   <dd class="card__info">от 9700 $</dd>
                 </dl>
-                <a class="card__button" href="">Забронировать</a>
+                <a class="card__button" href="" tabindex="0">Забронировать</a>
               </div>
             </article>
           </li>
@@ -238,7 +240,7 @@
                   <dt class="card__detail">Цена</dt>
                   <dd class="card__info">от 18600 $</dd>
                 </dl>
-                <a class="card__button" href="">Забронировать</a>
+                <a class="card__button" href="" tabindex="0">Забронировать</a>
               </div>
             </article>
           </li>
@@ -261,7 +263,7 @@
                   <dt class="card__detail">Цена</dt>
                   <dd class="card__info">от 11700 $</dd>
                 </dl>
-                <a class="card__button" href="">Забронировать</a>
+                <a class="card__button" href="" tabindex="0">Забронировать</a>
               </div>
             </article>
           </li>
@@ -284,7 +286,7 @@
                   <dt class="card__detail">Цена</dt>
                   <dd class="card__info">от 12500 $</dd>
                 </dl>
-                <a class="card__button" href="">Забронировать</a>
+                <a class="card__button" href="" tabindex="0">Забронировать</a>
               </div>
             </article>
           </li>
@@ -307,7 +309,7 @@
                   <dt class="card__detail">Цена</dt>
                   <dd class="card__info">от 12300 $</dd>
                 </dl>
-                <a class="card__button" href="">Забронировать</a>
+                <a class="card__button" href="" tabindex="0">Забронировать</a>
               </div>
             </article>
           </li>
@@ -325,15 +327,15 @@
             <h2 class="booking__heading page__section-heading">Раннее бронирование</h2>
             <p class="booking__info">Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты выезда и сэкономьте до 50%</p>
           </div>
-          <form class="booking__form form">
+          <form class="booking__form form" action="https://echo.htmlacademy.ru/" method="post">
             <h3 class="form__legend">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
             <label class="visually-hidden" for="name">Имя</label>
             <input type="text" placeholder="Имя" name="name" id="name" required>
             <label class="visually-hidden" for="phone">Телефон</label>
-            <input type="tel" placeholder="Телефон" name="phone" id="phone" required>
+            <input type="tel" placeholder="Телефон" name="phone" id="phone" pattern="^\+?[0-9]{3,15}$" required>
             <label class="visually-hidden" for="email">Email</label>
             <input type="email" placeholder="Email" name="email" id="email" required>
-            <input type="checkbox" checked name="agreement" id="agreement" required>
+            <input class="visually-hidden" type="checkbox" checked name="agreement" id="agreement" required>
             <label for="agreement">Я согласен на обработку моих&nbsp;персональный данных</label>
             <button type="submit">Оставить заявку</button>
           </form>
