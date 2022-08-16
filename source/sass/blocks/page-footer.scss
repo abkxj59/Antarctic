@@ -5,12 +5,14 @@
 .page-footer__container {
   display: flex;
   flex-wrap: nowrap;
-  min-height: 138px;
-  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: flex-start;
   justify-content: space-between;
 
   @include vp-1023 {
-    min-height: 120px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   @include vp-767 {
@@ -20,14 +22,16 @@
 }
 
 .page-footer__social {
-  max-width: 300px;
+  width: 135px;
+  flex-shrink: 0;
+  margin-top: 15px;
 
   @include vp-1023 {
-    max-width: 150px;
+    margin-top: 2px;
   }
 
   @include vp-767 {
-    max-width: 300px;
+    width: 100%;
     margin-top: 10px;
     margin-bottom: -5px;
   }
